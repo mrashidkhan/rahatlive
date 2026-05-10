@@ -18,7 +18,7 @@
         <li><a href="{{ route('home') }}#about">About Rahat</a></li>
         <li><a href="{{ route('home') }}#tour">Tour</a></li>
         <li><a href="{{ route('home') }}#poll">Voting</a></li>
-        <li><a href="{{ route('home') }}#stats">Statistics</a></li>
+        <li><a href="{{ route('home') }}#stats">Legacy</a></li>
         <li><a href="{{ route('home') }}#contact" class="nav-tribe">Contact Us</a></li>
       </ul>
     </nav>
@@ -41,7 +41,7 @@
         <li><a href="{{ route('home') }}#about">About Rahat</a></li>
         <li><a href="{{ route('home') }}#tour">Tour</a></li>
         <li><a href="{{ route('home') }}#poll">Voting</a></li>
-        <li><a href="{{ route('home') }}#stats">Statistics</a></li>
+        <li><a href="{{ route('home') }}#stats">Legacy</a></li>
         {{-- <li><a href="{{ route('home') }}#tribe">Join the Tribe</a></li> --}}
         <li><a href="{{ route('home') }}#contact">Contact Us</a></li>
       </ul>

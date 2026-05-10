@@ -9,6 +9,8 @@
 
   @include('partials.about')
 
+  @include('partials.stats')
+
   @include('partials.tour')
 
   @include('partials.poll')

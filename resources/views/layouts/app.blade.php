@@ -20,97 +20,95 @@
   <link rel="stylesheet" href="{{ asset('css/app.css') }}" />
 
   <style>
-  /* ═══════════════════════════════════════════════════
-     NAV — matches shreyaghoshal.com layout exactly:
-     • Single row, ~90px tall
-     • Background: #FFEBCD cream, always
-     • Logo: left, ~60px tall, transparent PNG on cream
-     • Links: right, Lato Bold uppercase
-     • "Join the Tribe": maroon, stands out from other links
-  ═══════════════════════════════════════════════════ */
+  /* ══════════════════════════════════════════════════════════
+     NAV — Exact match to shreyaghoshal.com
+     Color-picker confirmed: text #7A3B1E, bg #FFEBCD
+     Font: Raleway 700 Bold uppercase — bold & crisp
+     Size: 13.5px  Letter-spacing: 0.18em
+     Nav height: 100px
+  ══════════════════════════════════════════════════════════ */
 
-  /* ── Container ── */
   #site-header,
   #site-header.scrolled,
   #site-header.solid {
-    position:    fixed !important;
-    top:         0 !important;
-    left:        0 !important;
-    right:       0 !important;
-    z-index:     9999 !important;
-    background:  #FFEBCD !important;
-    height:      90px !important;
-    display:     flex !important;
-    align-items: center !important;
-    padding:     0 clamp(1.5rem, 5vw, 5rem) !important;
-    box-shadow:  0 2px 18px rgba(59,35,16,0.08) !important;
-    border-bottom: 1px solid rgba(139,90,43,0.10) !important;
-    transition:  none !important;
+    position:      fixed !important;
+    top:           0 !important;
+    left:          0 !important;
+    right:         0 !important;
+    z-index:       9999 !important;
+    background:    #FFEBCD !important;
+    height:        100px !important;
+    display:       flex !important;
+    align-items:   center !important;
+    padding:       0 clamp(1.5rem, 5vw, 5rem) !important;
+    box-shadow:    0 2px 12px rgba(100,50,20,0.10) !important;
+    transition:    none !important;
   }
 
   .header-inner {
     display:         flex !important;
     align-items:     center !important;
     justify-content: space-between !important;
-    max-width:       1200px !important;
+    max-width:       1280px !important;
     margin:          0 auto !important;
     width:           100% !important;
   }
 
-  /* ── Logo — left side, exactly like shreyaghoshal.com ── */
+  /* ── Logo ── */
   #site-header .site-logo {
     display:     flex !important;
     align-items: center !important;
     flex-shrink: 0 !important;
-    line-height: 1 !important;
   }
-
   #site-header .logo-img {
-    height:     62px !important;
-    width:      auto !important;
-    display:    block !important;
-    /* The PNG has transparent bg so it sits cleanly on #FFEBCD */
+    height:  66px !important;
+    width:   auto !important;
+    display: block !important;
   }
-
   #site-header .logo-fallback {
-    font-family:    'Cinzel', serif !important;
-    font-size:      20px !important;
-    font-weight:    600 !important;
-    letter-spacing: 0.18em !important;
+    font-family:    'Raleway', sans-serif !important;
+    font-size:      18px !important;
+    font-weight:    800 !important;
+    letter-spacing: 0.2em !important;
+    color:          #7A3B1E !important;
     text-transform: uppercase !important;
-    color:          #2C1810 !important;
     display:        none !important;
   }
-  /* Show fallback text only when image fails */
-  #site-header .logo-img[style*="display:none"] + .logo-fallback,
+  #site-header .logo-img[style*="display:none"]  + .logo-fallback,
   #site-header .logo-img[style*="display: none"] + .logo-fallback {
     display: block !important;
   }
 
-  /* ── Nav links — right side ── */
+  /* ── Desktop nav links
+       Raleway 700 Bold — same weight Shreya uses
+       #7A3B1E — darker richer brown = bold & visible on cream
+       13.5px — slightly larger for crispness
+       0.18em letter-spacing — wide, airy like Shreya ── */
   #site-header .main-nav ul {
     display:     flex !important;
     align-items: center !important;
-    gap:         2.6rem !important;
+    gap:         3.2rem !important;
     list-style:  none !important;
     margin:      0 !important;
     padding:     0 !important;
   }
 
   #site-header .main-nav a {
-    font-family:    'Lato', sans-serif !important;
-    font-size:      12.5px !important;
-    font-weight:    700 !important;
-    letter-spacing: 0.16em !important;
-    text-transform: uppercase !important;
-    color:          #3B2310 !important;
+    font-family:     'Raleway', sans-serif !important;
+    font-size:       13.5px !important;
+    font-weight:     700 !important;
+    letter-spacing:  0.18em !important;
+    text-transform:  uppercase !important;
+    color:           #7A3B1E !important;
     text-decoration: none !important;
-    position:       relative !important;
-    padding-bottom: 3px !important;
-    transition:     color 0.2s !important;
+    position:        relative !important;
+    padding-bottom:  4px !important;
+    white-space:     nowrap !important;
+    -webkit-font-smoothing: antialiased !important;
+    transition:      color 0.22s !important;
   }
 
-  /* Gold underline on hover */
+  /* Underline slide on hover */
   #site-header .main-nav a::after {
     content:    '' !important;
     position:   absolute !important;
@@ -118,36 +116,33 @@
     left:       0 !important;
     width:      0 !important;
     height:     1.5px !important;
-    background: #B8893A !important;
-    transition: width 0.25s ease !important;
+    background: #7A3B1E !important;
+    transition: width 0.28s ease !important;
   }
-  #site-header .main-nav a:hover { color: #7A4020 !important; }
-  #site-header .main-nav a:hover::after { width: 100% !important; }
+  #site-header .main-nav a:hover         { color: #4A1E08 !important; }
+  #site-header .main-nav a:hover::after  { width: 100% !important; }
 
-  /* ── "Join the Tribe" — maroon, exactly like Shreya's site ── */
+  /* ── Contact Us — same style, slightly stronger ── */
   #site-header .main-nav .nav-tribe {
-    font-family:    'Lato', sans-serif !important;
-    font-size:      12.5px !important;
-    font-weight:    700 !important;
-    letter-spacing: 0.16em !important;
+    font-family:    'Raleway', sans-serif !important;
+    font-size:      13.5px !important;
+    font-weight:    800 !important;
+    letter-spacing: 0.18em !important;
     text-transform: uppercase !important;
-    color:          #8B1A2B !important;
+    color:          #7A3B1E !important;
     background:     transparent !important;
     border:         none !important;
-    padding-bottom: 3px !important;
+    padding-bottom: 4px !important;
+    white-space:    nowrap !important;
   }
-  #site-header .main-nav .nav-tribe:hover {
-    color: #6A1020 !important;
-  }
-  #site-header .main-nav .nav-tribe::after {
-    background: #8B1A2B !important;
-  }
+  #site-header .main-nav .nav-tribe:hover        { color: #4A1E08 !important; }
+  #site-header .main-nav .nav-tribe::after       { background: #7A3B1E !important; }
 
   /* ── Hamburger ── */
   #site-header .hamburger {
     display:        none !important;
     flex-direction: column !important;
-    gap:            5px !important;
+    gap:            6px !important;
     background:     none !important;
     border:         none !important;
     cursor:         pointer !important;
@@ -155,37 +150,50 @@
   }
   #site-header .hamburger span {
     display:       block !important;
-    width:         24px !important;
+    width:         26px !important;
     height:        2px !important;
-    background:    #3B2310 !important;
+    background:    #7A3B1E !important;
     border-radius: 1px !important;
   }
 
   /* ── Mobile menu ── */
   .mobile-menu {
     background:  #FFEBCD !important;
-    padding-top: 90px !important;
+    padding-top: 100px !important;
   }
   .mobile-menu nav a {
-    font-family: 'Cinzel', serif !important;
-    font-size:   2rem !important;
-    color:       #2C1810 !important;
+    font-family:    'Raleway', sans-serif !important;
+    font-size:      1.8rem !important;
+    font-weight:    700 !important;
+    letter-spacing: 0.12em !important;
+    color:          #7A3B1E !important;
   }
-  .mobile-menu nav a:hover { color: #8B1A2B !important; }
-  .mobile-socials a { color: #B8893A !important; }
+  .mobile-menu nav a:hover { color: #4A1E08 !important; }
+  .mobile-socials a        { color: #7A3B1E !important; }
 
-  /* ── Hero sits directly below 90px nav ── */
+  /* ── Wider scrollbar ── */
+  html {
+    scrollbar-width: auto !important;
+    scrollbar-color: #C8A45A #FFEBCD !important;
+  }
+  ::-webkit-scrollbar             { width: 12px !important; }
+  ::-webkit-scrollbar-track       { background: #FFEBCD !important; }
+  ::-webkit-scrollbar-thumb       { background: #C8A45A !important; border-radius: 0 !important; }
+  ::-webkit-scrollbar-thumb:hover { background: #7A3B1E !important; }
+
+  /* ── Hero below nav ── */
   .hero {
-    margin-top: 90px !important;
-    height:     calc(100vh - 90px) !important;
+    margin-top: 100px !important;
+    height:     calc(100vh - 100px) !important;
   }
 
   /* ── Mobile ── */
   @media (max-width: 768px) {
-    #site-header, #site-header.scrolled { height: 68px !important; }
-    #site-header .main-nav { display: none !important; }
+    #site-header, #site-header.scrolled { height: 70px !important; }
+    #site-header .main-nav  { display: none !important; }
     #site-header .hamburger { display: flex !important; }
-    .hero { margin-top: 68px !important; height: calc(100vh - 68px) !important; }
+    .mobile-menu            { padding-top: 70px !important; }
+    .hero { margin-top: 70px !important; height: calc(100vh - 70px) !important; }
   }
   </style>
 
