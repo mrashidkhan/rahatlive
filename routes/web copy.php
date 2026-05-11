@@ -26,13 +26,6 @@ Route::post('/notify', [NotifyController::class, 'store'])->name('notify.store')
 // Contact / booking inquiry
 Route::post('/contact', [ContactController::class, 'store'])->name('contact.store');
 
-// ── Separate inner pages (PageController) ─────────────────────────────────
-Route::get('/about',   [\App\Http\Controllers\PageController::class, 'about'])  ->name('about');
-Route::get('/tour',    [\App\Http\Controllers\PageController::class, 'tour'])   ->name('tour');
-Route::get('/voting',  [\App\Http\Controllers\PageController::class, 'voting']) ->name('voting');
-Route::get('/legacy',  [\App\Http\Controllers\PageController::class, 'legacy']) ->name('legacy');
-Route::get('/contact', [\App\Http\Controllers\PageController::class, 'contact'])->name('contact');
-
 // City interest poll
 Route::post('/poll/vote', [PollController::class, 'vote'])->name('poll.vote');
 Route::get('/poll/results', [PollController::class, 'results'])->name('poll.results');
@@ -69,3 +62,5 @@ Route::prefix('admin')->name('admin.')->group(function () {
         Route::delete('inquiries/{inquiry}', [InquiryController::class, 'destroy'])->name('inquiries.destroy');
     });
 });
+
+
