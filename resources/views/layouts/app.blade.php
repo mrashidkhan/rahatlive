@@ -4,15 +4,15 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="csrf-token" content="{{ csrf_token() }}" />
-  <title>@yield('title', 'Rahat Fateh Ali Khan | Official Website')</title>
-  <meta name="description" content="@yield('description', 'Official website of Rahat Fateh Ali Khan — Sufi legend, Qawwali master, Bollywood icon.')">
+  <title>@yield('title', 'Rahat Fateh Ali Khan live')</title>
+  <meta name="description" content="@yield('description', 'Rahat Fateh Ali Khan — Sufi legend, Qawwali master, Bollywood icon.')">
 
 <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('images/favicon_io/apple-touch-icon.png') }}">
 <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('images/favicon_io/favicon-32x32.png') }}">
 <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('images/favicon_io/favicon-16x16.png') }}">
 <link rel="manifest" href="{{ asset('images/favicon_io/site.webmanifest') }}">
 
-  <meta property="og:title"       content="@yield('title', 'Rahat Fateh Ali Khan | Official Website')" />
+  <meta property="og:title"       content="@yield('title', 'Rahat Fateh Ali Khan | Live Shows')" />
   <meta property="og:description" content="@yield('description', 'Sufi legend. Qawwali master. The voice of a generation.')" />
   <meta property="og:image"       content="{{ asset('images/og/rahatliveog.png') }}" />
   <meta property="og:url"         content="{{ url()->current() }}" />
@@ -176,6 +176,13 @@
   }
   .mobile-menu nav a:hover { color: #4A1E08 !important; }
   .mobile-socials a        { color: #7A3B1E !important; }
+
+  /* ── Lock horizontal scroll/drag globally ── */
+  html, body {
+    overflow-x: hidden !important;
+    max-width:  100% !important;
+  }
+  body { touch-action: pan-y !important; }
 
   /* ── Wider scrollbar ── */
   html {

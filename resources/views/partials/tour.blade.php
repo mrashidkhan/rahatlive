@@ -38,13 +38,23 @@
           'btn_label'  => 'Buy Tickets',
         ],
         [
+          'city'       => 'Oxon Hill, MD',
+          'slug'       => 'oxenhill',
+          'date'       => 'Sun • Oct 04, 2026 • 8:00 PM',
+          'venue'      => 'The Theater at MGM National Harbor',
+          'ticket_url' => 'https://www.ticketmaster.com/rahat-fateh-ali-khan-national-harbor-maryland-10-04-2026/event/150064ADEE29D24F',
+          'btn_label'  => 'Buy Tickets',
+        ],
+        [
           'city'       => 'Trenton, NJ',
           'slug'       => 'newjersey',
           'date'       => 'Sat • Oct 10, 2026 • 8:00 PM',
           'venue'      => 'CURE Insurance Arena',
           'ticket_url' => 'https://www.ticketmaster.com/event/000064830EB4F88B',
           'btn_label'  => 'Buy Tickets',
-        ]
+        ],
+
+
 
 
       ];
